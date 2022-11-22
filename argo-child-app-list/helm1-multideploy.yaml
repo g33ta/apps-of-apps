@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx
+  name: nginx-multideploy
   # You'll usually want to add your resources to the argocd namespace.
   namespace: argocd
   # Add a this finalizer ONLY if you want these to cascade delete.
@@ -13,14 +13,14 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: https://github.com/codefresh-contrib/gitops-cert-level-2-examples.git
+    repoURL: https://github.com/g33ta/apps-of-apps.git
     targetRevision: HEAD
-    path: ./app-of-apps/manifests
+    path: ./apps-of-apps/helmcharts-list/k8s
    
   # Destination cluster and namespace to deploy the application
   destination:
     server: https://kubernetes.default.svc
-    namespace: nginx
+    namespace: argocd
 
   # Sync policy
   syncPolicy:
