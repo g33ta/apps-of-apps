@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://github.com/g33ta/apps-of-apps.git
     targetRevision: HEAD
-    path: ./apps-of-apps/helmcharts-list/helm-app
+    path: ./helmcharts-list/helm-app
    
   # Destination cluster and namespace to deploy the application
   destination:
