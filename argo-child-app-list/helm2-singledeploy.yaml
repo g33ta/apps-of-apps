@@ -13,7 +13,7 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: https://github.com/g33ta/apps-of-apps.git
+    repoURL: https://github.com/g33ta/apps-of-apps
     targetRevision: HEAD
     path: ./apps-of-apps/helmcharts-list/helm-app
    
